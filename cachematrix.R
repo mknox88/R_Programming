@@ -5,6 +5,15 @@
 ##   2. cacheSolve: This function computes the inverse of the special "matrix" returned by the
 ##      makeCacheMatrix function. If the inverse has already been calculated (and the matrix has not
 ##      changed), then the cacheSolve function will retrieve the inverse from the cache.
+##
+## Example utilization of these functions:
+##   m <- makeCacheMatrix(matrix(1:4, 2, 2))  # create "special" matrix and initialize it to 2x2 matrix
+##   cacheSolve(m)  # calculate initial inverse of matrix
+##   cacheSolve(m)  # return cached value of inverse
+##   m$set(matrix(6:9, 2, 2))  # set the value of the matrix to a new 2x2 matrix
+##   cacheSolve(m)  # calculate new inverse of matrix because matrix changed
+##   cacheSolve(m)  # return cached value of inverse
+##   m$get()        # return the value of the matrix
 
 
 
